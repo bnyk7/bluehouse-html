@@ -1,0 +1,223 @@
+body {
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url('https://cdn57.androidauthority.net/wp-content/uploads/2015/11/00-best-backgrounds-and-wallpaper-apps-for-android.jpg');
+  min-height:1000px;
+  background-size:cover;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  width: 80%;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.logo-container .logo {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.items-container .items {
+  display: flex;
+}
+
+.items .item {
+  list-style: none;
+  position: relative;
+  margin: 0 20px;
+}
+
+.item-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.item-link::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: #4ca1af;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+
+.item-link:hover::after,
+.active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.info .subtitle {
+  width: 400px;
+  font-size: 18px;
+  display: block;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: auto;
+}
+
+.info h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 70px;
+}
+
+.text-sliding-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliding-container {
+  height: 70px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.text {
+  font-size: 40px;
+  line-height: 68px;
+  color: #4ca1af;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.text:first-child {
+  animation: scrollText 12s infinite;
+}
+
+.btn {
+  color: #4ca1af;
+  background-color: transparent;
+  padding: 10px 40px;
+  display: block;
+  margin: auto;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-top: 20px;
+  border: 1px solid #4ca1af;
+  transition-duration: 0.5s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #4ca1af;
+}
+
+@keyframes scrollText {
+  0% {
+    margin-top: 0;
+  }
+  16% {
+    margin-top: -72px;
+  }
+  33% {
+    margin-top: -142px;
+  }
+  50% {
+    margin-top: -212px;
+  }
+  66% {
+    margin-top: -142px;
+  }
+  82% {
+    margin-top: -72px;
+  }
+  66% {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .info {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .container {
+    width: 100%;
+  }
+  .info h1 {
+    font-size: -webkit-xxx-large;
+  }
+  .text {
+    line-height: 60px;
+  }
+  .navbar {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 0;
+  }
+
+  .items-container {
+    padding: 0;
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .info h1 {
+    font-size: inherit;
+    margin: 0;
+    height: auto;
+  }
+  .text-sliding-container {
+    display: block;
+  }
+  .sliding-container {
+    height: 50px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .items {
+    flex-direction: column;
+    padding: 0;
+  }
+  .items .item {
+    margin: 10px;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .info .subtitle {
+    width: 100%;
+  }
+}
